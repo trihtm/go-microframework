@@ -8,7 +8,7 @@ import (
 	"go.uber.org/fx"
 )
 
-func NewEcho(lc fx.Lifecycle, cf config.Configuration) *echo.Echo {
+func NewHttpServer(lc fx.Lifecycle, cf config.Configuration) *echo.Echo {
 	e := echo.New()
 
 	lc.Append(fx.Hook{

@@ -13,7 +13,7 @@ func main() {
 	app := fx.New(
 		fx.Provide(
 			provider.NewConfig,
-			provider.NewEcho,
+			provider.NewHttpServer,
 		),
 
 		fx.Invoke(
