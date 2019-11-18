@@ -12,12 +12,11 @@ func main() {
 
 	app := fx.New(
 		fx.Provide(
-			provider.NewConfig,
+			provider.InitializeConfig,
 			provider.NewHttpServer,
 		),
 
 		fx.Invoke(
-			provider.InitConfig,
 			internal.RegisterRoutes,
 		),
 	)
