@@ -8,7 +8,7 @@ import (
 	"go-microframework/internal/config"
 )
 
-func InitializeConfig() (cf config.Configuration) {
+func InitializeConfig() (cf *config.Configuration) {
 	pflag.CommandLine.AddGoFlagSet(flag.CommandLine)
 	pflag.Parse()
 	_ = viper.BindPFlags(pflag.CommandLine)

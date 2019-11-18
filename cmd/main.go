@@ -4,6 +4,7 @@ import (
 	"flag"
 	"go-microframework/internal"
 	"go-microframework/internal/provider"
+	"go-microframework/pkg/database"
 	"go.uber.org/fx"
 )
 
@@ -19,6 +20,8 @@ func main() {
 		fx.Invoke(
 			internal.RegisterRoutes,
 		),
+
+		database.NewService(),
 	)
 
 	app.Run()
