@@ -5,6 +5,7 @@ import (
 	"go-microframework/internal"
 	"go-microframework/internal/provider"
 	"go-microframework/pkg/database"
+	"go-microframework/pkg/queue"
 	"go.uber.org/fx"
 )
 
@@ -22,6 +23,7 @@ func main() {
 		),
 
 		database.NewService(),
+		queue.NewService(),
 	)
 
 	app.Run()

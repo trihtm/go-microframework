@@ -21,3 +21,16 @@ database:
       #strict: true
       # engine:
       # options:
+
+queue:
+  default: "sync"
+  connections:
+    sync:
+      driver: "sync"
+    sqs:
+      driver: "sqs"
+      key: "AWS_ACCESS_KEY_ID"
+      secret: "AWS_SECRET_ACCESS_KEY"
+      prefix: "https://sqs.ap-southeast-1.amazonaws.com/your-account-id"
+      queue: "your-queue-name"
+      region: "ap-southeast-1"
