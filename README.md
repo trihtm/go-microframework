@@ -13,3 +13,5 @@ Easy to build ([Domain Driven Design](https://en.wikipedia.org/wiki/Domain-drive
 [Echo](https://echo.labstack.com/) - Handle && manage HTTP requests.
 
 [GORM](http://gorm.io/) - Handle && manage database connections, ORM library.
+
+[Watermill](https://watermill.io/) - A message streams library, be used for CQRS / Event Sourcing / RPC over messages / Sagas.
