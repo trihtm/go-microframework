@@ -4,8 +4,10 @@ import (
 	"flag"
 	"go-microframework/internal"
 	"go-microframework/internal/provider"
+	"go-microframework/pkg/bus"
 	"go-microframework/pkg/cache"
 	"go-microframework/pkg/database"
+	"go-microframework/pkg/events"
 	"go-microframework/pkg/filesystem"
 	"go-microframework/pkg/log"
 	"go-microframework/pkg/mail"
@@ -26,8 +28,10 @@ func main() {
 			internal.RegisterRoutes,
 		),
 
+		bus.NewService(),
 		cache.NewService(),
 		database.NewService(),
+		events.NewService(),
 		filesystem.NewService(),
 		mail.NewService(),
 		log.NewService(),
